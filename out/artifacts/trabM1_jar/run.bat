@@ -1,0 +1,1 @@
+java -jar trabM1.jar
