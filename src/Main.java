@@ -1,6 +1,7 @@
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.geom.Point2D;
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Main {
@@ -67,8 +68,7 @@ public class Main {
                 System.out.println("Entre com 2 pontos:\n");
                 int p0 = scan.nextInt();
                 int p1 = scan.nextInt();
-                Drawing.bresenham(polygon.getPolygon()[p0], polygon.getPolygon()[p1]);
-                canvas.hide();
+                canvas.drawBresenham(polygon.bresenham(p0,p1));
             }
         });
     }

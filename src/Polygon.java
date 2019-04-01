@@ -46,6 +46,47 @@ public class Polygon {
         translate(originX, originY);
     }
 
+    public ArrayList<Point2D> bresenham(int p0, int p1){
+        ArrayList<Point2D> bresenhamLine = new ArrayList<>();
+
+        int x0 = (int)points[p0].getX();
+        int y0 = (int)points[p0].getY();
+        int x1 = (int)points[p1].getX();
+        int y1 = (int)points[p1].getY();
+
+        int dx = Math.abs(x1 - x0);
+        int dy = Math.abs(y1 - y0);
+
+        int sx = x0 < x1 ? 1 : -1;
+        int sy = y0 < y1 ? 1 : -1;
+
+        int err = dx-dy;
+        int e2;
+
+        while(true)
+        {
+            bresenhamLine.add(new Point2D.Double(x0,y0));
+
+            if (x0 == x1 && y0 == y1)
+                break;
+
+            e2 = 2 * err;
+            if (e2 > -dy)
+            {
+                err = err - dy;
+                x0 = x0 + sx;
+            }
+
+            if (e2 < dx)
+            {
+                err = err + dx;
+                y0 = y0 + sy;
+            }
+        }
+
+        return bresenhamLine;
+    }
+
     public int[] getXPoints(){
         int [] xPoints = new int[points.length];
         for(int i =0; i < points.length; i++){

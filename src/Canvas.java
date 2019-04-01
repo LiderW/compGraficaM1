@@ -1,5 +1,6 @@
 import javax.swing.*;
 import java.awt.*;
+import java.awt.geom.Point2D;
 import java.awt.image.BufferedImage;
 import java.util.ArrayList;
 
@@ -49,6 +50,19 @@ public class Canvas {
             frame.setVisible(true);
         Graphics g = image.getGraphics();
         g.drawPolygon(polygon.getXPoints(), polygon.getYPoints(), polygon.getPolygon().length);
+        g.dispose();
+        panel.repaint();
+    }
+    
+    public void drawBresenham(ArrayList<Point2D> bresenhamLine){
+        image = new BufferedImage(WIDTH, HEIGHT, BufferedImage.TYPE_INT_RGB);
+        if(!frame.isVisible())
+            frame.setVisible(true);
+        for (Point2D point:bresenhamLine) {
+            image.setRGB((int)point.getX(), (int)point.getY(), Color.YELLOW.getRGB());
+        }
+        Graphics g = image.getGraphics();
+        g.drawImage(image, WIDTH, HEIGHT, null);
         g.dispose();
         panel.repaint();
     }
