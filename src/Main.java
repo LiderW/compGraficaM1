@@ -25,9 +25,7 @@ public class Main {
         }
 
         polygon = new Polygon(points);
-        canvas.draw(polygon);
-
-        canvas.createButton("Translate");
+		canvas.createButton("Translate");
         canvas.getLastButton().addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -71,5 +69,6 @@ public class Main {
                 canvas.drawBresenham(polygon.bresenham(p0,p1));
             }
         });
+        canvas.draw(polygon);
     }
 }

@@ -1,5 +1,6 @@
 import javax.swing.*;
 import java.awt.*;
+import java.awt.geom.Line2D;
 import java.awt.geom.Point2D;
 import java.awt.image.BufferedImage;
 import java.util.ArrayList;
@@ -33,6 +34,7 @@ public class Canvas {
         frame = new JFrame();
         frame.setLayout(new BorderLayout());
         frame.getContentPane().add(panel, BorderLayout.CENTER);
+        frame.add(buttonsPanel, BorderLayout.NORTH);
         frame.setTitle(title);
         frame.setSize(new Dimension(WIDTH, HEIGHT));
         frame.setResizable(false);
@@ -50,7 +52,7 @@ public class Canvas {
 
     public void draw(Polygon polygon){
         image = new BufferedImage(WIDTH, HEIGHT, BufferedImage.TYPE_INT_RGB);
-        frame.add(buttonsPanel, BorderLayout.NORTH);
+
         Graphics g = image.getGraphics();
         g.drawPolygon(polygon.getXPoints(), polygon.getYPoints(), polygon.getPolygon().length);
         g.dispose();
@@ -61,11 +63,30 @@ public class Canvas {
     
     public void drawBresenham(ArrayList<Point2D> bresenhamLine){
         image = new BufferedImage(WIDTH, HEIGHT, BufferedImage.TYPE_INT_RGB);
-        for (Point2D point:bresenhamLine) {
+
+        Graphics g = image.getGraphics();
+
+        /*for(int j = 40; j < HEIGHT; j += 40){
+            g.drawLine(0, j, WIDTH, j);
+        }
+
+        for(int i = 40; i < WIDTH; i += 40){
+            g.drawLine(i, 0, i, HEIGHT);
+        }*/
+
+        for(int i = 0; i < WIDTH; i += 40){
+            for(int j = 0; j < HEIGHT; j += 40){
+                Rectangle rect = new Rectangle(i, j, 40, 40);
+                g.drawRect(i, j, 40, 40);
+            }
+        }
+
+        for (Point2D point:bresenhamLine){
             image.setRGB((int)point.getX(), (int)point.getY(), Color.YELLOW.getRGB());
         }
-        Graphics g = image.getGraphics();
+
         g.drawImage(image, WIDTH, HEIGHT, null);
+
         g.dispose();
         panel.repaint();
         if(!frame.isVisible())
