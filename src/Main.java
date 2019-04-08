@@ -1,6 +1,9 @@
+import javax.swing.*;
+import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.geom.Point2D;
+import java.awt.image.BufferedImage;
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -69,6 +72,41 @@ public class Main {
                 canvas.drawBresenham(polygon.bresenham(p0,p1));
             }
         });
+
+        canvas.createButton("3D Cube");
+        canvas.getLastButton().addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                SwingUtilities.invokeLater(() -> {
+                    JFrame f = new JFrame();
+                    f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+                    f.setTitle("Rotating Cube");
+                    f.setResizable(false);
+                    f.add(new RotatingCube(0), BorderLayout.CENTER);
+                    f.pack();
+                    f.setLocationRelativeTo(null);
+                    f.setVisible(true);
+                });
+            }
+        });
+
+        canvas.createButton("Bugged 3D Cube");
+        canvas.getLastButton().addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                SwingUtilities.invokeLater(() -> {
+                    JFrame f = new JFrame();
+                    f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+                    f.setTitle("Rotating Cube");
+                    f.setResizable(false);
+                    f.add(new RotatingCube(1), BorderLayout.CENTER);
+                    f.pack();
+                    f.setLocationRelativeTo(null);
+                    f.setVisible(true);
+                });
+            }
+        });
+
         canvas.draw(polygon);
     }
 }
