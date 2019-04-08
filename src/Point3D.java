@@ -1,35 +1,31 @@
 public class Point3D {
-    private int x;
-    private int y;
-    private int z;
+    public double x, y, z;
 
-    public Point3D(int x, int y, int z) {
+    public Point3D(double x, double y, double z) {
         this.x = x;
         this.y = y;
         this.z = z;
     }
 
-    public int getX() {
-        return x;
+    public Point3D(Point3D point){
+        this.x = point.x;
+        this.y = point.y;
+        this.z = point.z;
     }
 
-    public void setX(int x) {
-        this.x = x;
+    public Point3D addPoint(Point3D point){
+        return new Point3D(x + point.x, y + point.y, z + point.z);
     }
 
-    public int getY() {
-        return y;
+    public Point3D subPoint(Point3D point){
+        return new Point3D(x - point.x, y - point.y, z - point.z);
     }
 
-    public void setY(int y) {
-        this.y = y;
+    public double dot(Point3D point){
+        return (x * point.x + y * point.y + z * point.z);
     }
 
-    public int getZ() {
-        return z;
-    }
-
-    public void setZ(int z) {
-        this.z = z;
+    public double dot(Vector3D vector){
+        return (x * vector.x + y * vector.y + z * vector.z);
     }
 }

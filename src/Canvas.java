@@ -126,6 +126,53 @@ public class Canvas {
             frame.setVisible(true);
     }
 
+    public void raytrace(){
+        image = new BufferedImage(WIDTH, HEIGHT, BufferedImage.TYPE_INT_RGB);
+
+        panel = new JPanel() {
+            @Override
+            protected void paintComponent(Graphics g) {
+                super.paintComponent(g);
+                g.drawImage(image, 0, 0, this);
+            }
+        };
+
+        panel.setBackground(Color.BLACK);
+
+        frame = new JFrame();
+        frame.setLayout(new BorderLayout());
+        frame.getContentPane().add(panel, BorderLayout.CENTER);
+        frame.add(buttonsPanel, BorderLayout.NORTH);
+        frame.setTitle("3d Sphere");
+        frame.setSize(new Dimension(WIDTH, HEIGHT));
+        frame.setResizable(false);
+        frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
+        frame.setVisible(false);
+
+        Graphics g = image.getGraphics();
+
+        long start = System.nanoTime();
+
+        Sphere sphere = new Sphere(new Point3D(0.0, 0.0, 0.0), 60.0, Color.RED);
+
+        for(int y = 0; y < HEIGHT; y++){
+            for(int x = 0; x < WIDTH; x++){
+                Ray ray = new Ray(new Point3D(x-WIDTH/2+.5, y-HEIGHT/2+.5, 100), new Vector3D(0.0, 0.0, -1.0));
+
+                if(sphere.hit(ray) != 0.0){
+                    image.setRGB(x, y, sphere.color.getRGB());
+                } else {
+                    image.setRGB(x, y, Color.BLACK.getRGB());
+                }
+            }
+        }
+
+        frame.setVisible(true);
+        long end = System.nanoTime();
+
+        long loopTime = (end - start) / (long)1000000000.0;
+    }
+
     public JButton getLastButton(){
         return buttons.get(buttons.size() - 1);
     }

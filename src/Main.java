@@ -107,6 +107,14 @@ public class Main {
             }
         });
 
+        canvas.createButton("Test Raytracing");
+        canvas.getLastButton().addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                canvas.raytrace();
+            }
+        });
+
         canvas.draw(polygon);
     }
 }
