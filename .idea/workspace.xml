@@ -7,16 +7,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3c3e1fcf-4fad-4708-86fc-841c9716760f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Point3D.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/RotatingCube.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ThreeDimensionalPolygon.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/trabM1/Main$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/trabM1/Main$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/trabM1/Main$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/trabM1/Main$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/trabM1/Main$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/trabM1/Main$3.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/trabM1/Main$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/trabM1/Main$4.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/trabM1/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/trabM1/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/trabM1_jar/trabM1.jar" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/trabM1_jar/trabM1.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/trabM1/RotatingCube.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/trabM1/RotatingCube.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/RotatingCube.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/RotatingCube.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -31,10 +25,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
+            <state relative-caret-position="1309">
               <caret line="84" column="44" selection-start-line="84" selection-start-column="44" selection-end-line="84" selection-end-column="44" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -43,11 +37,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/RotatingCube.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="59" column="30" selection-start-line="59" selection-start-column="30" selection-end-line="59" selection-end-column="30" />
+            <state relative-caret-position="408">
+              <caret line="24" column="41" selection-start-line="24" selection-start-column="41" selection-end-line="24" selection-end-column="41" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -121,8 +115,8 @@
         <option value="$PROJECT_DIR$/src/Canvas.java" />
         <option value="$PROJECT_DIR$/src/Point3D.java" />
         <option value="$PROJECT_DIR$/src/ThreeDimensionalPolygon.java" />
-        <option value="$PROJECT_DIR$/src/RotatingCube.java" />
         <option value="$PROJECT_DIR$/src/Main.java" />
+        <option value="$PROJECT_DIR$/src/RotatingCube.java" />
       </list>
     </option>
   </component>
@@ -138,8 +132,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -228,16 +222,18 @@
       <workItem from="1554470608501" duration="2747000" />
       <workItem from="1554542450779" duration="2984000" />
       <workItem from="1554720565056" duration="3216000" />
+      <workItem from="1554733272703" duration="849000" />
+      <workItem from="1554734155779" duration="39000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="66794000" />
+    <option name="totallyTimeSpent" value="67682000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1696" height="1026" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.23166259" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.23777506" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -284,6 +280,23 @@
     <entry file="file://$PROJECT_DIR$/src/BehavioursCanvas.java" />
     <entry file="file://$PROJECT_DIR$/src/Drawing.java" />
     <entry file="file://$PROJECT_DIR$/src/InteractiveRectangle.java" />
+    <entry file="file://$PROJECT_DIR$/src/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1309">
+          <caret line="84" column="44" selection-start-line="84" selection-start-column="44" selection-end-line="84" selection-end-column="44" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Canvas.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="10" column="21" selection-start-line="10" selection-start-column="21" selection-end-line="10" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Polygon.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="612">
@@ -310,27 +323,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Canvas.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="10" column="21" selection-start-line="10" selection-start-column="21" selection-end-line="10" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/RotatingCube.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="59" column="30" selection-start-line="59" selection-start-column="30" selection-end-line="59" selection-end-column="30" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="84" column="44" selection-start-line="84" selection-start-column="44" selection-end-line="84" selection-end-column="44" />
+        <state relative-caret-position="408">
+          <caret line="24" column="41" selection-start-line="24" selection-start-column="41" selection-end-line="24" selection-end-column="41" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

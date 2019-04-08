@@ -17,12 +17,12 @@ public class RotatingCube extends JPanel {
         setBackground(Color.BLACK);
 
         scale(100);
-        rotateCube(PI / 4, atan(sqrt(2)));
+        //rotateCube(PI / 4, atan(sqrt(2)));
 
         this.type = type;
 
         new Timer(17, (ActionEvent e) -> {
-            rotateCube(PI / 180, 0);
+            rotateCube(PI / 180, PI / 180);
             repaint();
         }).start();
     }
@@ -72,7 +72,12 @@ public class RotatingCube extends JPanel {
             double[] xy2 = new double[3];
             double[] xz1 = new double[3];
             double[] xz2 = new double[3];
-            for (int i = 0; i < edges.length; i++) {
+            for (int i = 0; i < edges.length-1; i++) {
+                if(i/2 % 2 == 0){
+                    g.setColor(Color.red);
+                } else {
+                    g.setColor(Color.gray);
+                }
                 xy1 = nodes[edges[i][0]];
                 xy2 = nodes[edges[i][1]];
                 i++;
@@ -82,9 +87,10 @@ public class RotatingCube extends JPanel {
                 int x[] = {(int) xy1[0], (int) xy2[0], (int) xz1[0], (int) xz2[0]};
                 int y[] = {(int) xy1[1], (int) xy2[1], (int) xz1[1], (int) xz2[1]};
 
-                g.drawPolygon(x, y, x.length);
+                g.fillPolygon(x, y, x.length);
             }
         }
+        g.setColor(Color.GREEN);
         for (double[] node : nodes)
             g.fillOval((int) round(node[0]) - 4, (int) round(node[1]) - 4, 8, 8);
     }
